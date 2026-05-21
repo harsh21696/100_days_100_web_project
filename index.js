@@ -427,6 +427,7 @@ function renderGrid() {
   grid.style.display = 'grid';
   noResults.style.display = 'none';
 
+  const totalPages = Math.max(1, Math.ceil(filtered.length / itemsPerPage));
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const pageItems = filtered.slice(startIndex, endIndex);
